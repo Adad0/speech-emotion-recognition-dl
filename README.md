@@ -254,7 +254,7 @@ python ablation_study.py
 1. Livingstone, S. R., & Russo, F. A. (2018). The Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS). *PLoS ONE*, 13(5), e0196391.
 2. Hochreiter, S., & Schmidhuber, J. (1997). Long Short-Term Memory. *Neural Computation*, 9(8), 1735–1780.
 3. Cho, K., et al. (2014). Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation. *EMNLP 2014*.
-4. Vaswani, A., et al. (2017). Attention Is All You Need. *NeurIPS 2017*.
+4. Vaswani, A., et al. (2017). Attention Is All You Need. NeurIPS 2017.
 5. Singh, J., Saheer, L. B., & Faust, O. (2023). Speech Emotion Recognition Using Attention Model. *IJERPH*, 20(6), 5140.
 
 ---
