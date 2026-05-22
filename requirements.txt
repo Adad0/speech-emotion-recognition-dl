@@ -1,0 +1,10 @@
+numpy
+librosa
+soundfile
+scikit-learn
+tqdm
+tensorflow>=2.10
+matplotlib
+seaborn
+umap-learn
+h5py
