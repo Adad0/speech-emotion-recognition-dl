@@ -27,7 +27,7 @@ This project follows the course requirement to combine **CNN, an RNN-family mode
 
 ---
 
-## 2. Dataset and Rationale
+## 2. Dataset and Rationale *(Taleb)*
 
 ### 2.1 RAVDESS
 
@@ -49,7 +49,7 @@ We deliberately avoided over-common benchmarks such as MNIST / Fashion-MNIST. RA
 
 ---
 
-## 3. Preprocessing Pipeline
+## 3. Preprocessing Pipeline *(Taleb)*
 
 All blocks consume a single, shared preprocessing pipeline (`preprocess_ravdess.py`).
 
@@ -150,7 +150,7 @@ BiGRU outperforms BiLSTM by ~3 points with fewer parameters. GRU's simpler gatin
 
 ---
 
-## 5. Hyperparameter Tuning & Regularization
+## 5. Hyperparameter Tuning & Regularization *(Adad)*
 
 | Hyperparameter | Value | Rationale |
 |---|---|---|
@@ -173,7 +173,7 @@ BiGRU outperforms BiLSTM by ~3 points with fewer parameters. GRU's simpler gatin
 
 ---
 
-## 6. Ablation Study
+## 6. Ablation Study *(Adad)*
 
 | Configuration | Test Accuracy | Δ vs Full |
 |---|---|---|
@@ -192,7 +192,7 @@ BiGRU outperforms BiLSTM by ~3 points with fewer parameters. GRU's simpler gatin
 
 ---
 
-## 7. Results Summary
+## 7. Results Summary *(Adad)*
 
 | Model / Configuration | Test Accuracy | Macro-F1 |
 |---|---|---|
