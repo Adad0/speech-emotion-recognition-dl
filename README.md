@@ -1,7 +1,7 @@
 # A Multi-Block Deep Learning Architecture for Speech Emotion Recognition Using CNN, BiLSTM, Autoencoder, and Attention Mechanisms
 
 > **Course Project — Deep Learning with Python**
-> Talebxg7 · İpek · Ahmad · Omar · Adad
+> Adad · Ahmad · İpek · Omar · Taleb
 
 ---
 
@@ -220,7 +220,6 @@ To justify each architectural component, we conduct a systematic ablation study 
 | w/o Attention | 0.6875 | 0.6762 |
 | CNN only (baseline) | 0.6250 | 0.6040 |
 
-
 **LSTM vs GRU comparison** (İpek's block):
 
 | Model | Test Acc | Macro F1 | Val Acc | Val Loss |
@@ -236,6 +235,7 @@ To justify each architectural component, we conduct a systematic ablation study 
 speech-emotion-recognition-dl/
 │
 ├── README.md
+├── requirements.txt
 ├── preprocess_ravdess.py     ← Preprocessing pipeline (Taleb)
 ├── cnn_block.py              ← Standalone CNN (Ahmad)
 ├── cnn_bilstm.py             ← CNN + BiLSTM/GRU (İpek)
@@ -243,12 +243,11 @@ speech-emotion-recognition-dl/
 ├── attention_block.py        ← Transformer Attention (Omar)
 ├── integrated_model.py       ← Full pipeline (Adad)
 ├── ablation_study.py         ← Ablation experiments (Adad)
-└── results/
-    ├── ablation_results.png
-    ├── ablation_lstm_vs_gru_curves.png
-    ├── confusion_matrix_best_birnn.png
-    ├── tsne_latent_space.png
-    └── cnn_fix_comparison.png
+├── ablation_results.png      ← Ablation bar chart
+├── ablation_lstm_vs_gru_curves.png
+├── confusion_matrix_best_birnn.png
+├── tsne_latent_space.png     ← Autoencoder latent space
+└── cnn_fix_comparison.png    ← CNN before/after fix
 ```
 
 ---
@@ -260,36 +259,24 @@ speech-emotion-recognition-dl/
 pip install -r requirements.txt
 ```
 
-### requirements.txt
-```
-numpy
-librosa
-soundfile
-scikit-learn
-tqdm
-tensorflow>=2.10
-matplotlib
-seaborn
-umap-learn
-```
-
 ### Preprocess Data
 ```bash
 # Place Audio_Speech_Actors_01-24/ in project root
-python data/preprocess_ravdess.py
+python preprocess_ravdess.py
 ```
 
 ### Train Models
 ```bash
-python models/cnn_block.py
-python models/cnn_bilstm.py
-python models/autoencoder.py
-python models/integrated_model.py
+python cnn_block.py
+python cnn_bilstm.py
+python autoencoder.py
+python attention_block.py
+python integrated_model.py
 ```
 
 ### Run Ablation Study
 ```bash
-python ablation/ablation_study.py
+python ablation_study.py
 ```
 
 ---
@@ -312,11 +299,11 @@ python ablation/ablation_study.py
 
 | Member | Role |
 |---|---|
-| **Taleb** | Dataset selection, preprocessing pipeline, GitHub README |
-| **İpek** | CNN + BiLSTM/GRU block, LSTM vs GRU ablation |
-| **Ahmad** | Standalone CNN block (retrained by Adad due to normalization errors) |
-| **Omar** | Autoencoder, Attention/Transformer block, t-SNE visualization |
 | **Adad** | CNN retraining, model integration, ablation study, final presentation |
+| **Ahmad** | Standalone CNN block (retrained by Adad due to normalization errors) |
+| **İpek** | CNN + BiLSTM/GRU block, LSTM vs GRU ablation |
+| **Omar** | Autoencoder, Attention/Transformer block, t-SNE visualization |
+| **Taleb** | Dataset selection, preprocessing pipeline, GitHub README |
 
 ---
 
